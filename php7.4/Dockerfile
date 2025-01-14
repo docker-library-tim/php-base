@@ -6,7 +6,7 @@ ENV TZ "Asia/Shanghai"
 RUN echo ${TZ} >/etc/timezone
 
 # 可选
-COPY ./../composer.phar /usr/local/bin/composer
+COPY composer.phar /usr/local/bin/composer
 
 # 创建www用户
 RUN addgroup -g 1000 -S www && adduser -s /sbin/nologin -S -D -u 1000 -G www www
